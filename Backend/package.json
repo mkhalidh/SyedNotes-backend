@@ -7,7 +7,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon index.js",
-        "build": "webpack --watch"
+        "build": "netlify deploy --prod"
     },
     "repository": {
         "type": "git",
@@ -28,7 +28,10 @@
         "mongodb": "^6.9.0",
         "mongoose": "^8.7.3",
         "node": "^23.1.0",
-        "nodemon": "^3.1.0"
+        "nodemon": "^3.1.0",
+        "netlify-cli": "^12.7.2",
+        "netlify-lambda": "^2.0.15",
+        "serverless-http": "^2.7.0"
     },
     "devDependencies": {
         "webpack": "^5.96.1"
