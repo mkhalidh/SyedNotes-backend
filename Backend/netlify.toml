@@ -1,2 +1,3 @@
 [build]
-function ="function"
+  publish = "build"          # Directory for static files or app build output
+  functions = "functions"     # Directory for Netlify Functions (if you have any)

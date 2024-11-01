@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import serverless from "serverless-http";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -37,3 +38,6 @@ app.use("/user", userRoute);
 app.listen(PORT,'0.0.0.0', () => {
     console.log(`Server is listening on port ${PORT}`);
 });
+
+app.use('./netlify/functions/index',router);
+module.exports = serverless(app);
